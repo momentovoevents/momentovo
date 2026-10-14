@@ -1,0 +1,5 @@
+const menuToggle=document.querySelector(".menu-toggle");
+const nav=document.querySelector(".nav");
+if(menuToggle&&nav){menuToggle.addEventListener("click",()=>{const open=nav.classList.toggle("open");menuToggle.setAttribute("aria-expanded",String(open));menuToggle.textContent=open?"×":"☰";});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");menuToggle.setAttribute("aria-expanded","false");menuToggle.textContent="☰";}));}
+document.querySelector("#year").textContent=new Date().getFullYear();
+document.querySelector("#contactForm").addEventListener("submit",e=>{e.preventDefault();const d=new FormData(e.currentTarget);const subject=encodeURIComponent("Zapytanie o organizację: "+(d.get("event")||"wydarzenie"));const body=encodeURIComponent(`Imię i nazwisko: ${d.get("name")}\nE-mail: ${d.get("email")}\nRodzaj wydarzenia: ${d.get("event")}\n\nWiadomość:\n${d.get("message")}`);document.querySelector("#formStatus").textContent="Otwieramy aplikację pocztową. Jeśli się nie uruchomi, napisz na momentovo@gmail.com.";window.location.href=`mailto:momentovo@gmail.com?subject=${subject}&body=${body}`;});

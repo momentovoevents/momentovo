@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Po podłączeniu domeny dodaj tutaj pełny adres mapy strony, np.:
+Sitemap: https://momentovo.eu/sitemap.xml

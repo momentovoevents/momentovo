@@ -1,0 +1,9 @@
+{
+  "name": "MOMENTOVO — Events & Celebrations",
+  "short_name": "MOMENTOVO",
+  "lang": "pl",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f7f6ef",
+  "theme_color": "#f7f6ef"
+}
